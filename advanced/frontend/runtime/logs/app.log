@@ -1,0 +1,97 @@
+2024-12-07 14:10:56 [::1][-][l4tmcko5nm1ofd2488h6r6n3f9][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\captcha\Captcha.php:175
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\captcha\Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\captcha\\Cap...', Array, Array)
+#5 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\captcha\\Cap...', Array, Array)
+#6 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Widget.php(143): yii\BaseYii::createObject(Array)
+#7 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\widgets\ActiveField.php(795): yii\base\Widget::widget(Array)
+#8 D:\phpstudy_pro\WWW\advanced\frontend\views\site\contact.php(33): yii\widgets\ActiveField->widget('yii\\captcha\\Cap...', Array)
+#9 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\View.php(347): require('D:\\phpstudy_pro...')
+#10 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\phpstudy_pro...', Array)
+#11 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\phpstudy_pro...', Array, Object(frontend\controllers\SiteController))
+#12 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('contact', Array, Object(frontend\controllers\SiteController))
+#13 D:\phpstudy_pro\WWW\advanced\frontend\controllers\SiteController.php(134): yii\base\Controller->render('contact', Array)
+#14 [internal function]: frontend\controllers\SiteController->actionContact()
+#15 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('contact', Array)
+#18 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/contact', Array)
+#19 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 D:\phpstudy_pro\WWW\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+2024-12-07 14:10:56 [::1][-][l4tmcko5nm1ofd2488h6r6n3f9][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'l4tmcko5nm1ofd2488h6r6n3f9'
+    'advanced-backend' => 'a34voe6rqobe4c7bq2f42s184f'
+    '_csrf-backend' => 'b3deb7aa43780e813b5e70c438f56ece21067d0e4983e2b7f4242d815ed868dfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"60WDcjz3b7H9IuKjCRu2OP0XmirT8BhV\";}'
+    '_csrf-frontend' => 'bb64d82931df152f22c10d1b65d084886e22ae131fa54ada4a623b23759ede65a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Xfm11TxVuRx2B5BspS8oiGvA8hXp53Ow\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/netbase/frontend/web/index.php'
+]
+
+$_SERVER = [
+    'PATH' => 'D:\\VMware\\VMware Workstation\\bin\\;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;C:\\Program Files\\nodejs\\;C:\\Program Files\\nodejs\\node_global\\;C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\anaconda3\\Library\\usr\\bin;C:\\ProgramData\\anaconda3\\Library\\bin;C:\\ProgramData\\anaconda3\\Scripts;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\JetBrains\\PyCharm Community Edition 2023.2.3\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Scripts;C:\\ProgramData\\anaconda3\\Library\\bin;D:\\App\\Fiddler;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\86153\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHPRC' => 'D:/phpstudy_pro/Extensions/php/php8.2.9nts'
+    '_FCGI_SHUTDOWN_EVENT_' => '8836'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Fcontact'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63819'
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b mod_fcgid/2.3.9a mod_log_rotate/1.02'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'advanced-frontend=l4tmcko5nm1ofd2488h6r6n3f9; advanced-backend=a34voe6rqobe4c7bq2f42s184f; _csrf-backend=b3deb7aa43780e813b5e70c438f56ece21067d0e4983e2b7f4242d815ed868dfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2260WDcjz3b7H9IuKjCRu2OP0XmirT8BhV%22%3B%7D; _csrf-frontend=bb64d82931df152f22c10d1b65d084886e22ae131fa54ada4a623b23759ede65a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Xfm11TxVuRx2B5BspS8oiGvA8hXp53Ow%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Fabout'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733580656.703
+    'REQUEST_TIME' => 1733580656
+    'argv' => [
+        0 => 'r=site%2Fcontact'
+    ]
+    'argc' => 1
+]

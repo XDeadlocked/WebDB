@@ -1,0 +1,238 @@
+2024-10-17 19:39:17 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#8 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#18 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 D:\phpstudy_pro\WWW\advanced\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#6 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#16 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 D:\phpstudy_pro\WWW\advanced\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2024-10-17 19:39:17 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\86153\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'YAYA'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_10844' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\86153'
+    'IGCCSVC_DB' => 'AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8y5qrTiI/0umsk4JV6sbRwQAAAACAAAAAAAQZgAAAAEAACAAAAD1v6HkmiypdeoOKOCpulFP7mzxif4uNGNrF/hptarZqAAAAAAOgAAAAAIAACAAAABQAiJnrMDEz5rWP1cENaFRL8e4oNaLmccsJiq+w4N0eGAAAADQW5DrOAEHk3+43HcCtesQEmFQO3wWEhuGwZBQ8isIkByMS0VpXmYSd45btGXJfblUKuMh8xLp3UooWd/cEByhuTrIsHl69pzl0S82icfKZ/ViyaK7W3VPTZ4dtDMhSDJAAAAAsDCD5kJPQ0A7b5u+40WDxg4OCbcHCTkDSYmKEgtUMyoaLAA9OaowNqHoeMEgHoVY4xgIgwmn2upgJho7P5l/kw=='
+    'LOCALAPPDATA' => 'C:\\Users\\86153\\AppData\\Local'
+    'LOGONSERVER' => '\\\\YAYA'
+    'NUMBER_OF_PROCESSORS' => '20'
+    'OneDrive' => 'C:\\Users\\86153\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\VMware\\VMware Workstation\\bin\\;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\anaconda3\\Library\\usr\\bin;C:\\ProgramData\\anaconda3\\Library\\bin;C:\\ProgramData\\anaconda3\\Scripts;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\JetBrains\\PyCharm Community Edition 2023.2.3\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Scripts;C:\\ProgramData\\anaconda3\\Library\\bin;D:\\App\\Fiddler;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\86153\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 154 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '9a03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\86153\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\86153\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'YAYA'
+    'USERDOMAIN_ROAMINGPROFILE' => 'YAYA'
+    'USERNAME' => '86153'
+    'USERPROFILE' => 'C:\\Users\\86153'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\phpstudy_pro\\WWW\\advanced\\'
+    'ZES_ENABLE_SYSMAN' => '1'
+    '__PSLockDownPolicy' => '0'
+    'PHP_SELF' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'SCRIPT_NAME' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'PATH_TRANSLATED' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1729165157.2918
+    'REQUEST_TIME' => 1729165157
+    'argv' => [
+        0 => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-10-17 19:40:52 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', '123456', NULL)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#8 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#18 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 D:\phpstudy_pro\WWW\advanced\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#6 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#16 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 D:\phpstudy_pro\WWW\advanced\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2024-10-17 19:40:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\86153\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'YAYA'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_10844' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\86153'
+    'IGCCSVC_DB' => 'AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8y5qrTiI/0umsk4JV6sbRwQAAAACAAAAAAAQZgAAAAEAACAAAAD1v6HkmiypdeoOKOCpulFP7mzxif4uNGNrF/hptarZqAAAAAAOgAAAAAIAACAAAABQAiJnrMDEz5rWP1cENaFRL8e4oNaLmccsJiq+w4N0eGAAAADQW5DrOAEHk3+43HcCtesQEmFQO3wWEhuGwZBQ8isIkByMS0VpXmYSd45btGXJfblUKuMh8xLp3UooWd/cEByhuTrIsHl69pzl0S82icfKZ/ViyaK7W3VPTZ4dtDMhSDJAAAAAsDCD5kJPQ0A7b5u+40WDxg4OCbcHCTkDSYmKEgtUMyoaLAA9OaowNqHoeMEgHoVY4xgIgwmn2upgJho7P5l/kw=='
+    'LOCALAPPDATA' => 'C:\\Users\\86153\\AppData\\Local'
+    'LOGONSERVER' => '\\\\YAYA'
+    'NUMBER_OF_PROCESSORS' => '20'
+    'OneDrive' => 'C:\\Users\\86153\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\VMware\\VMware Workstation\\bin\\;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\anaconda3\\Library\\usr\\bin;C:\\ProgramData\\anaconda3\\Library\\bin;C:\\ProgramData\\anaconda3\\Scripts;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\JetBrains\\PyCharm Community Edition 2023.2.3\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Scripts;C:\\ProgramData\\anaconda3\\Library\\bin;D:\\App\\Fiddler;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\86153\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 154 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '9a03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\86153\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\86153\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'YAYA'
+    'USERDOMAIN_ROAMINGPROFILE' => 'YAYA'
+    'USERNAME' => '86153'
+    'USERPROFILE' => 'C:\\Users\\86153'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\phpstudy_pro\\WWW\\advanced\\'
+    'ZES_ENABLE_SYSMAN' => '1'
+    '__PSLockDownPolicy' => '0'
+    'PHP_SELF' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'SCRIPT_NAME' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'PATH_TRANSLATED' => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1729165252.0291
+    'REQUEST_TIME' => 1729165252
+    'argv' => [
+        0 => 'D:\\phpstudy_pro\\WWW\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
