@@ -1,0 +1,1326 @@
+2024-12-08 15:38:39 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\captcha\Captcha.php:175
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\captcha\Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\captcha\\Cap...', Array, Array)
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\captcha\\Cap...', Array, Array)
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Widget.php(143): yii\BaseYii::createObject(Array)
+#7 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\widgets\ActiveField.php(795): yii\base\Widget::widget(Array)
+#8 E:\XAMPP\XAMPP\htdocs\advanced\frontend\views\site\contact.php(34): yii\widgets\ActiveField->widget('yii\\captcha\\Cap...', Array)
+#9 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(347): require('E:\\XAMPP\\XAMPP\\...')
+#10 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\XAMPP\\XAMPP\\...', Array)
+#11 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\XAMPP\\XAMPP\\...', Array, Object(frontend\controllers\SiteController))
+#12 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('contact', Array, Object(frontend\controllers\SiteController))
+#13 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\SiteController.php(135): yii\base\Controller->render('contact', Array)
+#14 [internal function]: frontend\controllers\SiteController->actionContact()
+#15 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('contact', Array)
+#18 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/contact', Array)
+#19 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+2024-12-08 15:38:39 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51613'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668719.2434
+    'REQUEST_TIME' => 1733668719
+]
+2024-12-08 15:38:43 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "board/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('board/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:38:43 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'board/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51618'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=board%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=board%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668723.7315
+    'REQUEST_TIME' => 1733668723
+]
+2024-12-08 15:38:44 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "user/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:38:44 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=board%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51618'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668724.6902
+    'REQUEST_TIME' => 1733668724
+]
+2024-12-08 15:38:57 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "history/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('history/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:38:57 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'history/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51622'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=history%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=history%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668737.3791
+    'REQUEST_TIME' => 1733668737
+]
+2024-12-08 15:39:16 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "application/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('application/ind...', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:39:16 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'application/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51625'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=application%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=application%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668756.196
+    'REQUEST_TIME' => 1733668756
+]
+2024-12-08 15:39:19 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "frontier/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('frontier/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:39:19 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'frontier/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51625'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=frontier%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=frontier%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668759.5868
+    'REQUEST_TIME' => 1733668759
+]
+2024-12-08 15:39:22 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', '123456', NULL)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(481): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#15 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#16 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\DomainController.php(24): yii\db\Query->count()
+#17 [internal function]: frontend\controllers\DomainController->actionIndex()
+#18 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#21 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('domain/index', Array)
+#22 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#24 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(481): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#13 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#14 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\DomainController.php(24): yii\db\Query->count()
+#15 [internal function]: frontend\controllers\DomainController->actionIndex()
+#16 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#19 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('domain/index', Array)
+#20 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+2024-12-08 15:39:22 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'domain/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51625'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=domain%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=domain%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668762.0177
+    'REQUEST_TIME' => 1733668762
+]
+2024-12-08 15:39:22 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', '123456', NULL)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#11 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(481): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#15 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#16 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\DomainController.php(24): yii\db\Query->count()
+#17 [internal function]: frontend\controllers\DomainController->actionIndex()
+#18 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#21 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('domain/index', Array)
+#22 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#24 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(247): yii\db\mysql\Schema->createQueryBuilder()
+#9 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Schema->getQueryBuilder()
+#10 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(481): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#13 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#14 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\DomainController.php(24): yii\db\Query->count()
+#15 [internal function]: frontend\controllers\DomainController->actionIndex()
+#16 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#19 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('domain/index', Array)
+#20 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+2024-12-08 15:39:22 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'domain/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=domain%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=domain%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733668762.0557
+    'REQUEST_TIME' => 1733668762
+]
+2024-12-08 15:57:52 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "scientist/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('scientist/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:57:52 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'scientist/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '52675'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=scientist%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=scientist%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733669872.7476
+    'REQUEST_TIME' => 1733669872
+]
+2024-12-08 15:57:55 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "application/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('application/ind...', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 15:57:55 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'application/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '52675'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=application%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=application%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733669875.8179
+    'REQUEST_TIME' => 1733669875
+]
+2024-12-08 16:19:33 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "scientist/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('scientist/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 16:19:33 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'scientist/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '53910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=scientist%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=scientist%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733671173.7764
+    'REQUEST_TIME' => 1733671173
+]
+2024-12-08 16:19:35 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "scientist/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('scientist/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 16:19:35 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'scientist/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '53914'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=scientist%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=scientist%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733671175.4265
+    'REQUEST_TIME' => 1733671175
+]
+2024-12-08 16:34:54 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "scientist/index". in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('scientist/index', Array)
+#1 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2024-12-08 16:34:54 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'scientist/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '54708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=scientist%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=scientist%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733672094.0261
+    'REQUEST_TIME' => 1733672094
+]
+2024-12-08 16:41:48 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\ProjectController.php:81
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\ProjectController.php(28): frontend\controllers\ProjectController->findModel('0')
+#1 [internal function]: frontend\controllers\ProjectController->actionView('0')
+#2 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('view', Array)
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('project/view', Array)
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2024-12-08 16:41:48 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'project/view'
+    'id' => '0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=project%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '55125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=project%2Fview&id=0'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=project%2Fview&id=0'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733672508.6671
+    'REQUEST_TIME' => 1733672508
+]
+2024-12-08 16:41:52 [::1][-][vges01bqcpjrllu87s64b4kfmc][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\ProjectController.php:81
+Stack trace:
+#0 E:\XAMPP\XAMPP\htdocs\advanced\frontend\controllers\ProjectController.php(50): frontend\controllers\ProjectController->findModel('0')
+#1 [internal function]: frontend\controllers\ProjectController->actionUpdate('0')
+#2 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('update', Array)
+#5 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('project/update', Array)
+#6 E:\XAMPP\XAMPP\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\XAMPP\XAMPP\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2024-12-08 16:41:52 [::1][-][vges01bqcpjrllu87s64b4kfmc][info][application] $_GET = [
+    'r' => 'project/update'
+    'id' => '0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'vges01bqcpjrllu87s64b4kfmc'
+    '_csrf-frontend' => '5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/XAMPP/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Microsoft Edge\";v=\"128\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=project%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=vges01bqcpjrllu87s64b4kfmc; _csrf-frontend=5a20c1662b20d7ff52a6b0ebdc1c4971c5cab0c0615248aa1af013cdf8fe53a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pNFgnRyOxC5tuEnszK87DsOTPE2jEYWb%22%3B%7D'
+    'PATH' => 'E:\\jdk\\jdk-1.8\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.6\\libnvvp;D:\\true software security\\bin\\;D:\\2023.10.7anaconda download;D:\\2023.10.7anaconda download\\Library\\mingw-w64\\bin;D:\\2023.10.7anaconda download\\Library\\usr\\bin;D:\\2023.10.7anaconda download\\Library\\bin;D:\\2023.10.7anaconda download\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;E:\\matlab2024a\\runtime\\win64;E:\\matlab2024a\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.1.0\\;E:\\node\\;E:\\git\\Git\\cmd;E:\\tortoise\\bin;E:\\AndroidStudio\\AndroidSDK\\platform-tools;C:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\86153\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\86153\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\86153\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\PyCharm Community Edition 2022.3.3\\bin;;D:\\texlive\\2023\\bin\\windows;C:\\Users\\86153\\AppData\\Roaming\\npm;E:\\XAMPP\\XAMPP\\php;C:\\Users\\86153\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\86153\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/XAMPP/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/XAMPP/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '55149'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=project%2Fupdate&id=0'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=project%2Fupdate&id=0'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1733672512.7183
+    'REQUEST_TIME' => 1733672512
+]
