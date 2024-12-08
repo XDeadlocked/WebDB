@@ -58,7 +58,7 @@ AppAsset::register($this);
         ['label' => '关于我们', 'url' => ['/site/about']],
         ['label' => '联系我们', 'url' => ['/site/contact']],
         ['label' => '留言板', 'url' => ['/board/index']],
-        ['label' => '个人信息', 'url' => ['/user/index']],
+        ['label' => '组员信息', 'url' => ['/member/index']],
         ['label' => '团队信息', 'url' => ['/team/index']],
     ];
     if (Yii::$app->user->isGuest) {
