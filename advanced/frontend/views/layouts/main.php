@@ -16,6 +16,8 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
@@ -57,8 +59,8 @@ AppAsset::register($this);
         ['label' => '主页', 'url' => ['/site/index']],
         ['label' => '关于我们', 'url' => ['/site/about']],
         ['label' => '联系我们', 'url' => ['/site/contact']],
-        ['label' => '留言板', 'url' => ['/discussion/index']],
-        ['label' => '组员信息', 'url' => ['/member/index']],
+        ['label' => '留言板', 'url' => ['/board/index']],
+        ['label' => '个人信息', 'url' => ['/user/index']],
         ['label' => '团队信息', 'url' => ['/team/index']],
     ];
     if (Yii::$app->user->isGuest) {

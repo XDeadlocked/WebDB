@@ -2,6 +2,7 @@
 /**
  * team:我说的队
  * Coding by 何禹姗 2211421,20241207
+ * Coding by 胡文馨 2211989,20241207
  * 主页
  */
 
@@ -40,7 +41,7 @@ $this->title = 'My Yii Application';
 
                 <p>伟大的成就离不开杰出的人物。本模块致力于介绍那些对人工智能发展做出重大贡献的科学家、工程师和企业家。他们中有些人奠定了AI理论的基础，有些人在特定技术领域取得了突破性进展，还有些人则成功地将AI商业化，改变了行业格局。</p>
 
-                <p><a class="btn btn-outline-secondary" href="<?= \yii\helpers\Url::to(['/scientist/index']) ?>">查看人物介绍 &raquo;</a></p>
+                <p><a class="btn btn-outline-secondary" href="<?= \yii\helpers\Url::to(['/people/index']) ?>">查看人物介绍 &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>应用场景</h2>
