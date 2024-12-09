@@ -6,7 +6,7 @@
  */
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
 /* @var $members app\models\Member[] */
@@ -18,27 +18,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <h1><?= Html::encode($this->title) ?></h1>
 
-<?= GridView::widget([
+<?= ListView::widget([
     'dataProvider' => new \yii\data\ArrayDataProvider([
         'allModels' => $members,
         'key' => 'Mid',
     ]),
-    'columns' => [
-        'Mid',
-        'Mname',
-        'Mnumber',
-        'Mprofession',
-        // 自定义 Mlink 列以显示为可点击链接
-        [
-            'attribute' => 'Mlink',
-            'format' => 'raw', // 确保内容不被HTML转义
-            'value' => function ($model) {
-                return Html::a($model->Mlink, $model->Mlink, ['target' => '_blank']);
-            },
-        ],
-        'Mgroup',
-        ['class' => 'yii\grid\ActionColumn'],
-    ],
+    'itemView' => '_memberView', // 指定itemView文件
+    'layout' => "{items}\n<div class='text-center'>{pager}</div>",
 ]); ?>
 
 </div>
