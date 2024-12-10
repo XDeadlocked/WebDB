@@ -2,21 +2,21 @@
 
 namespace backend\controllers;
 
-use backend\models\Research;
-use backend\models\ResearchSearch;
+use backend\models\Scene;
+use backend\models\SceneSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ResearchController implements the CRUD actions for Research model.
+ * SceneController implements the CRUD actions for Scene model.
  */
 /**
  * team: 我说的队
  * Coding by 许宸
  * 前沿研究控制器
  */
-class ResearchController extends Controller
+class SceneController extends Controller
 {
     /**
      * @inheritDoc
@@ -37,13 +37,13 @@ class ResearchController extends Controller
     }
 
     /**
-     * Lists all Research models.
+     * Lists all Scene models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new ResearchSearch();
+        $searchModel = new SceneSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -53,30 +53,30 @@ class ResearchController extends Controller
     }
 
     /**
-     * Displays a single Research model.
-     * @param int $ResearchID ResearchID
+     * Displays a single Scene model.
+     * @param int $SceneID SceneID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($ResearchID)
+    public function actionView($SceneID)
     {
         return $this->render('view', [
-            'model' => $this->findModel($ResearchID),
+            'model' => $this->findModel($SceneID),
         ]);
     }
 
     /**
-     * Creates a new Research model.
+     * Creates a new Scene model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Research();
+        $model = new Scene();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->ResearchID]);
+                return $this->redirect(['view', 'id' => $model->SceneID]);
             }
         } else {
             $model->loadDefaultValues();
@@ -88,18 +88,18 @@ class ResearchController extends Controller
     }
 
     /**
-     * Updates an existing Research model.
+     * Updates an existing Scene model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $ResearchID ResearchID
+     * @param int $SceneID SceneID
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($ResearchID)
+    public function actionUpdate($SceneID)
     {
-        $model = $this->findModel($ResearchID);
+        $model = $this->findModel($SceneID);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'ResearchID' => $model->ResearchID]);
+            return $this->redirect(['view', 'SceneID' => $model->SceneID]);
         }
 
         return $this->render('update', [
@@ -108,29 +108,29 @@ class ResearchController extends Controller
     }
 
     /**
-     * Deletes an existing Research model.
+     * Deletes an existing Scene model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $ResearchID ResearchID
+     * @param int $SceneID SceneID
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($ResearchID)
+    public function actionDelete($SceneID)
     {
-        $this->findModel($ResearchID)->delete();
+        $this->findModel($SceneID)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Research model based on its primary key value.
+     * Finds the Scene model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $ResearchID ResearchID
-     * @return Research the loaded model
+     * @param int $SceneID SceneID
+     * @return Scene the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($ResearchID)
+    protected function findModel($SceneID)
     {
-        if (($model = Research::findOne(['id' => $ResearchID])) !== null) {
+        if (($model = Scene::findOne(['id' => $SceneID])) !== null) {
             return $model;
         }
 
