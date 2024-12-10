@@ -20,6 +20,14 @@ return [
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],
+        // 'homeUrl' => [
+        //     'class' => 'yii\web\UrlManager', // 确保包含 "class" 元素
+        //     'baseUrl' => '', // 可以根据需要设置
+        //     'urlFormat' => \yii\web\UrlManager::FORMAT_STANDARD, // 可以根据需要设置
+        //     'rules' => [
+        //     // 你的 URL 规则
+        //     ],
+        // ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',

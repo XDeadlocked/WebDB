@@ -16,7 +16,8 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use frontend\models\LoginForm;
+use frontend\models\LogoutForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -57,17 +58,22 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
                 'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
+                [
+                    'actions' => ['signup'],
+                    'allow' => true,
+                    'roles' => ['?'], // 允许游客访问注册页面
                 ],
+                [
+                    'actions' => ['logout'],
+                    'allow' => true,
+                    'roles' => ['@'], // 只允许已认证用户访问登出操作
+                ],
+                [
+                    'actions' => ['index'], // 添加这条规则以允许游客访问主页
+                    'allow' => true,
+                    'roles' => ['?'], // 允许游客访问主页
+                ],
+            ],
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -101,6 +107,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        // 检查是否有错误
+        if (Yii::$app->session->hasFlash('error')) {
+            Yii::$app->session->setFlash('error', '登录失败，请检查用户名和密码。');
+        }
         return $this->render('index');
     }
 
@@ -117,10 +127,9 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            // 登录成功后重定向到首页
+            return $this->goHome();
         }
-
-        $model->password = '';
 
         return $this->render('login', [
             'model' => $model,
@@ -134,8 +143,16 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
-        Yii::$app->user->logout();
+        // 创建 LogoutForm 实例
+        $model = new LogoutForm();
 
+        // 调用 logout() 方法进行登出
+        if ($model->logout()) {
+            // 登出成功后重定向到首页
+            return $this->goHome();
+        }
+
+        // 如果登出失败，返回到登出页面（这一步通常不会执行，因为 logout 方法返回 true）
         return $this->goHome();
     }
 
@@ -171,6 +188,5 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
 
 }
