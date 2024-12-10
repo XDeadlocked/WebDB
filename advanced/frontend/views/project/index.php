@@ -19,10 +19,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('创建新项目', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => new \yii\data\ArrayDataProvider([
             'allModels' => $projects,
@@ -38,7 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'Tech:ntext',
             'Effect:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\Column',
+                'content' => function ($model, $key, $index, $column) {
+                    return ''; // 空内容
+                },
+                'header' => '', // 空标题
+                'contentOptions' => ['style' => 'width: 50px;'], // 设置宽度
+            ],
         ],
     ]); ?>
 
