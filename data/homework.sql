@@ -1,21 +1,37 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : phpstudy
+ Source Server         : hys
  Source Server Type    : MySQL
- Source Server Version : 50726
+ Source Server Version : 50726 (5.7.26)
  Source Host           : localhost:3306
- Source Schema         : homework
+ Source Schema         : webdb
 
  Target Server Type    : MySQL
- Target Server Version : 50726
+ Target Server Version : 50726 (5.7.26)
  File Encoding         : 65001
 
- Date: 10/12/2024 21:00:59
+ Date: 11/12/2024 21:47:54
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for administrator
+-- ----------------------------
+DROP TABLE IF EXISTS `administrator`;
+CREATE TABLE `administrator`  (
+  `Aid` int(11) NOT NULL AUTO_INCREMENT,
+  `Aname` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Apassword` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Amail` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`Aid`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of administrator
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for discussion
@@ -26,7 +42,7 @@ CREATE TABLE `discussion`  (
   `Dtext` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `Ddate` date NULL DEFAULT NULL,
   PRIMARY KEY (`Did`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of discussion
@@ -46,7 +62,7 @@ CREATE TABLE `domains`  (
   `Application` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `References` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`DomainID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of domains
@@ -74,7 +90,7 @@ CREATE TABLE `history`  (
   `technology_impact` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `references` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of history
@@ -96,19 +112,6 @@ INSERT INTO `history` VALUES (14, 2021, 'AlphaFold2解决蛋白质折叠问题',
 INSERT INTO `history` VALUES (15, 2022, 'DALL·E发布（DALL·E Release）', 'OpenAI发布了DALL·E，一个图像生成模型，能够根据自然语言描述生成全新图像。', 'DALL·E展示了AI在创意和艺术领域的潜力，能够基于文字描述生成原创的图像内容，推动了AI艺术创作的热潮。', 'https://en.wikipedia.org/wiki/DALL%E2%80%99E');
 
 -- ----------------------------
--- Table structure for log
--- ----------------------------
-DROP TABLE IF EXISTS `log`;
-CREATE TABLE `log`  (
-  `Logid` int(11) NOT NULL,
-  `Uid` int(11) NOT NULL,
-  `Uname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Logtime` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`Logid`) USING BTREE,
-  INDEX `name`(`Uname`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
 -- Table structure for members
 -- ----------------------------
 DROP TABLE IF EXISTS `members`;
@@ -120,7 +123,7 @@ CREATE TABLE `members`  (
   `Mlink` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Mprofession` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Mid`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of members
@@ -140,7 +143,7 @@ CREATE TABLE `people`  (
   `contributions` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `references` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of people
@@ -173,7 +176,7 @@ CREATE TABLE `project`  (
   `Tech` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `Effect` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of project
@@ -192,10 +195,10 @@ INSERT INTO `project` VALUES (11, 'Google 的 LaMDA（Language Model for Dialogu
 INSERT INTO `project` VALUES (12, 'Salesforce 的 Einstein AI 平台', '企业在销售、市场和客户服务等领域面临大量的数据处理和决策需求。传统的数据分析方法往往耗时且不够智能，难以充分利用数据的价值。', '开发一个基于AI的商业智能平台，帮助企业在各个环节实现智能化决策，提升业务效率和客户满意度。', '预测分析：利用机器学习算法，分析历史数据，预测未来的销售趋势、客户需求等。\r\n推荐系统：根据用户行为和偏好，推荐合适的产品和服务，提升转化率。\r\n自然语言处理（NLP）：解析客户反馈和社交媒体评论，识别潜在的机会和问题，优化营销策略。\r\n自动化流程：通过AI驱动的自动化工具，简化日常任务，如邮件分类、日程安排等，节省时间和资源。\r\n集成与扩展：与Salesforce的核心CRM系统无缝集成，支持第三方应用的扩展，提供一站式的解决方案。\r\n', 'Salesforce Einstein 已经在全球多个行业中广泛应用，帮助企业实现了数据驱动的智能化决策，提升了业务效率和客户满意度，该平台还不断学习新的数据和用户反馈，优化其推荐和服务，提供了更加个性化的体验。');
 
 -- ----------------------------
--- Table structure for reserch
+-- Table structure for research
 -- ----------------------------
-DROP TABLE IF EXISTS `reserch`;
-CREATE TABLE `reserch`  (
+DROP TABLE IF EXISTS `research`;
+CREATE TABLE `research`  (
   `ResearchID` int(11) NOT NULL,
   `PaperTitle` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Authors` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
@@ -205,25 +208,25 @@ CREATE TABLE `reserch`  (
   `Link` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`ResearchID`) USING BTREE,
   INDEX `SceID`(`SceneID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
--- Records of reserch
+-- Records of research
 -- ----------------------------
-INSERT INTO `reserch` VALUES (1, 'Intelligent traffic management system', 'Prithvinath Manikonda; Anil Kumar Yerrapragada; Sai Sasank Annasamudram', '2011 IEEE Conference on Sustainable Utilization and Development in Engineering and Technology (STUDENT)', 2011, 1, 'https://ieeexplore.ieee.org/abstract/document/6089337/');
-INSERT INTO `reserch` VALUES (2, 'Machine Learning-Based Traffic Flow Prediction and Intelligent Traffic Management', 'Zheng Xu Jiaqiang Yuan Liqiang Yu Guanghui Wang Mingwei Zhu', 'IJCSIT', 2024, 1, 'https://doi.org/10.62051/ijcsit.v2n1.03');
-INSERT INTO `reserch` VALUES (3, 'Polyp-SAM: transfer SAM for polyp segmentation', 'Yuheng Li, Mingzhe Hu, Xiaofeng Yang', 'Medical Imaging 2024: Computer-Aided Diagnosis', 2024, 2, 'https://doi.org/10.1117/12.3006809');
-INSERT INTO `reserch` VALUES (4, 'Polyp-Mamba: Polyp Segmentation with Visual Mamba', 'Zhongxing Xu, Feilong Tang, Zhe Chen, Zheng Zhou, Weishan Wu, Yuyao Yang, Yu Liang, Jiyu Jiang, Xuyue Cai & Jionglong Su', 'MICCAI', 2024, 2, 'https://link.springer.com/chapter/10.1007/978-3-031-72111-3_48');
-INSERT INTO `reserch` VALUES (5, 'Design and implementation of intelligent monitoring system for agricultural environment in IoT', 'Yongchao Song, Jiping Bi, Xuan Wang', 'Internet of Things', 2024, 3, 'https://www.sciencedirect.com/science/article/pii/S2542660523003529');
-INSERT INTO `reserch` VALUES (6, 'Intelligent Machines, IoT, and AI in Revolutionizing Agriculture for Water Processing', 'Krishnagandhi Pachiappan, K. Anitha, R. Pitchai, S. Sangeetha, T. V. V. Satyanarayana, Sampath Boopathi', 'Handbook of Research on AI and ML for Intelligent Machines and Systems', 2024, 3, 'https://www.igi-global.com/chapter/intelligent-machines-iot-and-ai-in-revolutionizing-agriculture-for-water-processing/334480');
-INSERT INTO `reserch` VALUES (7, 'VoiceTuner: Self-Supervised Pre-training and Efficient Fine-tuning For Voice Generation', 'Rongjie Huang, Yongqi Wang, Ruofan Hu, Xiaoshan Xu', 'ACM MM', 2024, 4, 'https://dl.acm.org/doi/abs/10.1145/3664647.3681695');
-INSERT INTO `reserch` VALUES (8, 'All You Need Is Your Voice: Emotional Face Representation with Audio Perspective for Emotional Talking Face Generation', 'Seongho Kim & Byung Cheol Song', 'ECCV', 2024, 4, 'https://link.springer.com/chapter/10.1007/978-3-031-73039-9_20');
-INSERT INTO `reserch` VALUES (9, 'Multi-sensor fusion based industrial action recognition method under the environment of intelligent manufacturing', 'Zipeng Wang, Jihong Yan', 'Journal of Manufacturing Systems', 2024, 5, 'https://www.sciencedirect.com/science/article/pii/S0278612524000852');
-INSERT INTO `reserch` VALUES (10, 'Intelligent manufacturing for strengthening operational resilience during the COVID-19 pandemic: A dynamic capability theory perspective', 'Mengjie Xi a, Yang Liu a, Wei Fang a, Taiwen Feng b', 'International Journal of Production Economics', 2024, 5, 'https://www.sciencedirect.com/science/article/pii/S0925527323003109');
-INSERT INTO `reserch` VALUES (11, 'Financial Risk Analysis Using Integrated Data and Transformer-Based Deep Learning', 'Yijing WeiKe XuJianhua YaoMengfang SunYing Sun', 'Journal of Computer Science and Software Applications', 2024, 6, 'https://mfacademia.org/index.php/jcssa/article/view/167');
-INSERT INTO `reserch` VALUES (12, 'Deep Learning Model-Driven Financial Risk Prediction and Analysis', 'Tianyi Yang *,Ang Li,Jiahao Xu,Guangze Su,Jiufan Wang', 'NaN', 2024, 6, 'https://www.preprints.org/manuscript/202406.2069');
-INSERT INTO `reserch` VALUES (13, 'Recommender Systems in the Era of Large Language Models (LLMs)', 'Zihuai Zhao; Wenqi Fan; Jiatong Li; Yunqing Liu; Xiaowei Mei; Yiqi Wang', 'IEEE Transactions on Knowledge and Data Engineering', 2024, 7, 'https://ieeexplore.ieee.org/abstract/document/10506571/');
-INSERT INTO `reserch` VALUES (14, 'On-Device Recommender Systems: A Comprehensive Survey', 'Hongzhi Yin, Liang Qu, Tong Chen, Wei Yuan, Ruiqi Zheng, Jing Long, Xin Xia, Yuhui Shi, Chengqi Zhang', 'NaN', 2024, 7, 'https://arxiv.org/abs/2401.11441');
+INSERT INTO `research` VALUES (1, 'Intelligent traffic management system', 'Prithvinath Manikonda; Anil Kumar Yerrapragada; Sai Sasank Annasamudram', '2011 IEEE Conference on Sustainable Utilization and Development in Engineering and Technology (STUDENT)', 2011, 1, 'https://ieeexplore.ieee.org/abstract/document/6089337/');
+INSERT INTO `research` VALUES (2, 'Machine Learning-Based Traffic Flow Prediction and Intelligent Traffic Management', 'Zheng Xu Jiaqiang Yuan Liqiang Yu Guanghui Wang Mingwei Zhu', 'IJCSIT', 2024, 1, 'https://doi.org/10.62051/ijcsit.v2n1.03');
+INSERT INTO `research` VALUES (3, 'Polyp-SAM: transfer SAM for polyp segmentation', 'Yuheng Li, Mingzhe Hu, Xiaofeng Yang', 'Medical Imaging 2024: Computer-Aided Diagnosis', 2024, 2, 'https://doi.org/10.1117/12.3006809');
+INSERT INTO `research` VALUES (4, 'Polyp-Mamba: Polyp Segmentation with Visual Mamba', 'Zhongxing Xu, Feilong Tang, Zhe Chen, Zheng Zhou, Weishan Wu, Yuyao Yang, Yu Liang, Jiyu Jiang, Xuyue Cai & Jionglong Su', 'MICCAI', 2024, 2, 'https://link.springer.com/chapter/10.1007/978-3-031-72111-3_48');
+INSERT INTO `research` VALUES (5, 'Design and implementation of intelligent monitoring system for agricultural environment in IoT', 'Yongchao Song, Jiping Bi, Xuan Wang', 'Internet of Things', 2024, 3, 'https://www.sciencedirect.com/science/article/pii/S2542660523003529');
+INSERT INTO `research` VALUES (6, 'Intelligent Machines, IoT, and AI in Revolutionizing Agriculture for Water Processing', 'Krishnagandhi Pachiappan, K. Anitha, R. Pitchai, S. Sangeetha, T. V. V. Satyanarayana, Sampath Boopathi', 'Handbook of Research on AI and ML for Intelligent Machines and Systems', 2024, 3, 'https://www.igi-global.com/chapter/intelligent-machines-iot-and-ai-in-revolutionizing-agriculture-for-water-processing/334480');
+INSERT INTO `research` VALUES (7, 'VoiceTuner: Self-Supervised Pre-training and Efficient Fine-tuning For Voice Generation', 'Rongjie Huang, Yongqi Wang, Ruofan Hu, Xiaoshan Xu', 'ACM MM', 2024, 4, 'https://dl.acm.org/doi/abs/10.1145/3664647.3681695');
+INSERT INTO `research` VALUES (8, 'All You Need Is Your Voice: Emotional Face Representation with Audio Perspective for Emotional Talking Face Generation', 'Seongho Kim & Byung Cheol Song', 'ECCV', 2024, 4, 'https://link.springer.com/chapter/10.1007/978-3-031-73039-9_20');
+INSERT INTO `research` VALUES (9, 'Multi-sensor fusion based industrial action recognition method under the environment of intelligent manufacturing', 'Zipeng Wang, Jihong Yan', 'Journal of Manufacturing Systems', 2024, 5, 'https://www.sciencedirect.com/science/article/pii/S0278612524000852');
+INSERT INTO `research` VALUES (10, 'Intelligent manufacturing for strengthening operational resilience during the COVID-19 pandemic: A dynamic capability theory perspective', 'Mengjie Xi a, Yang Liu a, Wei Fang a, Taiwen Feng b', 'International Journal of Production Economics', 2024, 5, 'https://www.sciencedirect.com/science/article/pii/S0925527323003109');
+INSERT INTO `research` VALUES (11, 'Financial Risk Analysis Using Integrated Data and Transformer-Based Deep Learning', 'Yijing WeiKe XuJianhua YaoMengfang SunYing Sun', 'Journal of Computer Science and Software Applications', 2024, 6, 'https://mfacademia.org/index.php/jcssa/article/view/167');
+INSERT INTO `research` VALUES (12, 'Deep Learning Model-Driven Financial Risk Prediction and Analysis', 'Tianyi Yang *,Ang Li,Jiahao Xu,Guangze Su,Jiufan Wang', 'NaN', 2024, 6, 'https://www.preprints.org/manuscript/202406.2069');
+INSERT INTO `research` VALUES (13, 'Recommender Systems in the Era of Large Language Models (LLMs)', 'Zihuai Zhao; Wenqi Fan; Jiatong Li; Yunqing Liu; Xiaowei Mei; Yiqi Wang', 'IEEE Transactions on Knowledge and Data Engineering', 2024, 7, 'https://ieeexplore.ieee.org/abstract/document/10506571/');
+INSERT INTO `research` VALUES (14, 'On-Device Recommender Systems: A Comprehensive Survey', 'Hongzhi Yin, Liang Qu, Tong Chen, Wei Yuan, Ruiqi Zheng, Jing Long, Xin Xia, Yuhui Shi, Chengqi Zhang', 'NaN', 2024, 7, 'https://arxiv.org/abs/2401.11441');
 
 -- ----------------------------
 -- Table structure for scene
@@ -238,7 +241,7 @@ CREATE TABLE `scene`  (
   `Challenges` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `FuturePotential` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`SceneID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of scene
@@ -262,12 +265,10 @@ CREATE TABLE `users`  (
   `Umail` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Uid`) USING BTREE,
   INDEX `Uname`(`Uname`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (4, 'test1', '$2y$13$p.8ECt02tO4adWY/7lQfIuKdsDv5vbLDvCgeJ5rI2bvE9T4o4oT62', '15302128907@163.com');
-INSERT INTO `users` VALUES (5, 'test2', '$2y$13$dVvPJqS866HW/XFvrfcId.CkcCt3VWpCGdSr2WCYtNFBpBKFSaGgO', '2211532@nankai.edu.cn');
 
 SET FOREIGN_KEY_CHECKS = 1;

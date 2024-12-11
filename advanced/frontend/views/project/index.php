@@ -19,30 +19,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= GridView::widget([
+    <?= ListView::widget([
         'dataProvider' => new \yii\data\ArrayDataProvider([
             'allModels' => $projects,
             'pagination' => [
                 'pageSize' => 10,
             ],
         ]),
-        'columns' => [
-            'ID',
-            'ProjectName',
-            'Background:ntext',
-            'Goal:ntext',
-            'Tech:ntext',
-            'Effect:ntext',
-
-            [
-                'class' => 'yii\grid\Column',
-                'content' => function ($model, $key, $index, $column) {
-                    return ''; // 空内容
-                },
-                'header' => '', // 空标题
-                'contentOptions' => ['style' => 'width: 50px;'], // 设置宽度
-            ],
-        ],
+        'itemView' => '_projectCard', // 使用单独视图文件来渲染每个项目
+        'options' => ['class' => 'row'], // 确保所有卡片在一个容器中
+        'itemOptions' => ['class' => 'col-12 mb-4'], // 每个项目卡片占据整行并有底部间距
+        'layout' => "{items}\n{pager}", // 定义布局模板
+        'viewParams' => ['projects' => $projects],
     ]); ?>
 
 </div>
