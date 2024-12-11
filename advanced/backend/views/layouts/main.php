@@ -3,6 +3,7 @@
 /**
  * team:我说的队
  * Coding by 胡文馨 2211989,20241211
+ * Coding by 石家伊 2211532,20241211
  * 新增并合并团队信息介绍
  */
 use common\widgets\Alert;
@@ -58,26 +59,26 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => '主页', 'url' => ['/site/index']],
+        ['label' => '主页', 'url' => ['site/index']],
 
         //['label' => '关于我们', 'url' => ['/site/about']],
         //['label' => '联系我们', 'url' => ['/site/contact']],
-        ['label' => '留言板', 'url' => ['/discussion/index']],
-        ['label' => '组员信息', 'url' => ['/member/index']],
+        //['label' => '留言板', 'url' => ['/discussion/index']],
+        //['label' => '组员信息', 'url' => ['/member/index']],
         //['label' => '团队信息', 'url' => ['/team/index']],
-        ['label' => '团队信息', 'url' => ['site/team-info']], // 合并后的菜单项
+        //['label' => '团队信息', 'url' => ['site/team-info']], // 合并后的菜单项
     ];
-    $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
+    $menuItems[] = ['label' => '管理员注册', 'url' => ['/site/signup']];
 
     // 使用会话中的 'adname' 来判断用户是否已登录
 $adname = Yii::$app->session->get('adname');
 if ($adname === null) {
     // 如果用户未登录，显示注册和登录链接
-    $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
+    $menuItems[] = ['label' => '管理员登录', 'url' => ['/site/login']];
 } else {
     // 如果用户已登录，显示欢迎信息和退出登录链接
     $menuItems[] = '<li class="nav-item">'
-        . Html::tag('span', '欢迎用户: ' . Html::encode($adname), ['class' => 'nav-link'])
+        . Html::tag('span', '欢迎管理员: ' . Html::encode($adname), ['class' => 'nav-link'])
         . '</li>';
     
         $menuItems[] = '<li class="nav-item">'
