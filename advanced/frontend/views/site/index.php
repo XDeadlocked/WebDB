@@ -34,7 +34,7 @@ $this->title = 'My Yii Application';
 
                 <p>前沿研究是推动人工智能不断进步的动力源泉。在这里，我们会深入探讨最新的研究成果，特别是那些发表在顶级学术会议和期刊上的高质量论文，让读者紧跟AI领域的最新趋势，还能够激发新的思考和灵感，促进跨学科的合作与交流。</p>
 
-                <p><a class="btn btn-outline-secondary" href="<?= \yii\helpers\Url::to(['/frontier/index']) ?>">查看前沿研究 &raquo;</a></p>
+                <p><a class="btn btn-outline-secondary" href="<?= \yii\helpers\Url::to(['/research/index']) ?>">查看前沿研究 &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>人物介绍</h2>
@@ -48,7 +48,7 @@ $this->title = 'My Yii Application';
 
                 <p>人工智能的应用场景极其广泛，从日常生活的便捷工具到复杂的企业级解决方案，它正在改变我们与世界互动的方式。本模块将探讨AI在不同领域中的具体应用场景，提供一些成功的案例研究，展示AI是如何解决实际问题并带来创新变革的。</p>
 
-                <p><a class="btn btn-outline-secondary" href="<?= \yii\helpers\Url::to(['/application/index']) ?>">查看应用场景 &raquo;</a></p>
+                <p><a class="btn btn-outline-secondary" href="<?= \yii\helpers\Url::to(['/scene/index']) ?>">查看应用场景 &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>涵盖领域</h2>
