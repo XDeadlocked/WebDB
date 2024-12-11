@@ -2,7 +2,11 @@
 
 /** @var \yii\web\View $this */
 /** @var string $content */
-
+/**
+ * team:我说的队
+ * Coding by 胡文馨 2211989,20241211
+ * 新增并合并团队信息介绍
+ */
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use yii\bootstrap4\Breadcrumbs;
@@ -57,11 +61,12 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => '主页', 'url' => ['/site/index']],
-        ['label' => '关于我们', 'url' => ['/site/about']],
-        ['label' => '联系我们', 'url' => ['/site/contact']],
-        ['label' => '留言板', 'url' => ['/board/index']],
-        ['label' => '个人信息', 'url' => ['/user/index']],
-        ['label' => '团队信息', 'url' => ['/team/index']],
+        //['label' => '关于我们', 'url' => ['/site/about']],
+        //['label' => '联系我们', 'url' => ['/site/contact']],
+        ['label' => '留言板', 'url' => ['/discussion/index']],
+        ['label' => '组员信息', 'url' => ['/member/index']],
+        //['label' => '团队信息', 'url' => ['/team/index']],
+        ['label' => '团队信息', 'url' => ['site/team-info']], // 合并后的菜单项
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];

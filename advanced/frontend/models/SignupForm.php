@@ -1,48 +1,43 @@
 <?php
 
+/**
+ * Team: 我说的队
+ * Coding by 石家伊 2211532, 20241210
+ * 注册 表单model
+ */
+
 namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
-use common\models\User;
+use frontend\models\User;
 
-/**
- * Signup form
- */
 class SignupForm extends Model
 {
     public $username;
-    public $email;
     public $password;
+    public $email;
 
-
-    /**
-     * {@inheritdoc}
-     */
     public function rules()
     {
         return [
-            ['username', 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
-
-            ['email', 'trim'],
-            ['email', 'required'],
+            [['username', 'password', 'email'], 'required'],
+            ['username', 'unique', 'targetClass' => '\frontend\models\User', 'targetAttribute' => 'Uname', 'message' => 'This username has already been taken.'],
             ['email', 'email'],
-            ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
-
-            ['password', 'required'],
-            ['password', 'string', 'min' => Yii::$app->params['user.passwordMinLength']],
+            ['email', 'unique', 'targetClass' => '\frontend\models\User', 'targetAttribute' => 'Umail', 'message' => 'This email address has already been taken.'],
+            ['password', 'string', 'min' => 6],
         ];
     }
 
-    /**
-     * Signs user up.
-     *
-     * @return bool whether the creating new account was successful and email was sent
-     */
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'Username',
+            'password' => 'Password',
+            'email' => 'Email',
+        ];
+    }
+
     public function signup()
     {
         if (!$this->validate()) {
@@ -50,31 +45,51 @@ class SignupForm extends Model
         }
         
         $user = new User();
-        $user->username = $this->username;
-        $user->email = $this->email;
-        $user->setPassword($this->password);
-        $user->generateAuthKey();
-        $user->generateEmailVerificationToken();
-
-        return $user->save() && $this->sendEmail($user);
+        $user->Uname = $this->username;
+        $user->Upassword = Yii::$app->security->generatePasswordHash($this->password);
+        $user->Umail = $this->email;
+        
+        return $user->save() ? $user : null;
     }
 
-    /**
-     * Sends confirmation email to user
-     * @param User $user user model to with email should be send
-     * @return bool whether the email was sent
-     */
-    protected function sendEmail($user)
+    public function getPasswordStrength()
     {
-        return Yii::$app
-            ->mailer
-            ->compose(
-                ['html' => 'emailVerify-html', 'text' => 'emailVerify-text'],
-                ['user' => $user]
-            )
-            ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
-            ->setTo($this->email)
-            ->setSubject('Account registration at ' . Yii::$app->name)
-            ->send();
+        $score = 0;
+        $length = strlen($this->password);
+
+        // Check length
+        if ($length >= 8) {
+            $score += 1;
+        } elseif ($length >= 6) {
+            $score += 0.5;
+        }
+
+        // Check for uppercase letters
+        if (preg_match('/[A-Z]/', $this->password)) {
+            $score += 1;
+        }
+
+        // Check for lowercase letters
+        if (preg_match('/[a-z]/', $this->password)) {
+            $score += 1;
+        }
+
+        // Check for numbers
+        if (preg_match('/[0-9]/', $this->password)) {
+            $score += 1;
+        }
+
+        // Check for special characters
+        if (preg_match('/[\W_]/', $this->password)) {
+            $score += 1;
+        }
+
+        if ($score >= 4) {
+            return 'Strong';
+        } elseif ($score >= 2) {
+            return 'Medium';
+        } else {
+            return 'Weak';
+        }
     }
 }
