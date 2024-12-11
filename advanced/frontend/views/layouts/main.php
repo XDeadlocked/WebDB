@@ -63,19 +63,32 @@ AppAsset::register($this);
         ['label' => '组员信息', 'url' => ['/member/index']],
         ['label' => '团队信息', 'url' => ['/team/index']],
     ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
+    $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
+
+    // 使用会话中的 'username' 来判断用户是否已登录
+$username = Yii::$app->session->get('username');
+if ($username === null) {
+    // 如果用户未登录，显示注册和登录链接
+    $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
+} else {
+    // 如果用户已登录，显示欢迎信息和退出登录链接
+    $menuItems[] = '<li class="nav-item">'
+        . Html::tag('span', '欢迎用户: ' . Html::encode($username), ['class' => 'nav-link'])
+        . '</li>';
+    
+        $menuItems[] = '<li class="nav-item">'
+        . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline', 'id' => 'logout-form'])
+        . Html::submitButton(
+            '退出登录',
+            [
+                'class' => 'btn btn-link logout',
+                'onclick' => 'event.preventDefault(); document.getElementById("logout-form").submit();'
+            ]
+        )
+        . Html::endForm()
+        . '</li>';
+}
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav ml-auto'],
         'items' => $menuItems,
@@ -104,4 +117,4 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage();
+<?php $this->endPage(); ?>

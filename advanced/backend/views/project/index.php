@@ -13,6 +13,7 @@ use yii\grid\GridView;
 $this->title = '项目列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="project-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -39,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'ID' => $model->ID]);
-                 }
+                }
             ],
         ],
     ]); ?>
