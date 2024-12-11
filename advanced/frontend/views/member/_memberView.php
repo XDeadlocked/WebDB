@@ -9,8 +9,7 @@ use yii\helpers\Html;
 
 ?>
 
-
-<div class="card mb-3" style="background-color: #f8f9fa;">
+<div class="card mb-3" style="background-color: rgba(255, 255, 255, 0.7); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <div class="card-body">
         <div class="row">
             <div class="col">
@@ -20,12 +19,12 @@ use yii\helpers\Html;
                 <p class="card-text"><strong>学号：</strong> <?= Html::encode($model->Mnumber) ?></p>
             </div>
             <div class="col">
-            <p class="card-text"><strong>专业：</strong> <?= Html::encode($model->Mprofession) ?></p>
+                <p class="card-text"><strong>专业：</strong> <?= Html::encode($model->Mprofession) ?></p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-            <p class="card-text"><strong>个人作业链接：</strong> <a href="<?= Html::encode($model->Mlink) ?>" target="_blank"><?= Html::encode($model->Mlink) ?></a></p>
+                <p class="card-text"><strong>个人作业链接：</strong> <a href="<?= Html::encode($model->Mlink) ?>" target="_blank"><?= Html::encode($model->Mlink) ?></a></p>
             </div>
         </div>
         <div class="row">
