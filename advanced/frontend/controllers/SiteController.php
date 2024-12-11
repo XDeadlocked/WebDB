@@ -4,7 +4,10 @@
  * Team: 我说的队
  * Coding by 石家伊 2211532, 20241210
  * 注册controller
+ * Coding by 胡文馨 2211989, 20241211
+ * 团队信息controller
  */
+=======
 
 namespace frontend\controllers;
 
@@ -157,10 +160,21 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays team info page.
+     *
+     * @return string
+     */
+    public function actionTeamInfo()
+    {
+        return $this->render('team-info'); // 渲染团队信息页面视图
+    }
+
+    /**
      * Displays contact page.
      *
      * @return mixed
      */
+    /*
     public function actionContact()
     {
         $model = new ContactForm();
@@ -178,15 +192,19 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
+    */
     /**
      * Displays about page.
      *
      * @return mixed
      */
+    /*
     public function actionAbout()
     {
         return $this->render('about');
     }
+    */
+
 
 }
+
