@@ -63,12 +63,12 @@ AppAsset::register($this);
         ['label' => '组员信息', 'url' => ['/member/index']],
         ['label' => '团队信息', 'url' => ['/team/index']],
     ];
+    $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
 
     // 使用会话中的 'username' 来判断用户是否已登录
 $username = Yii::$app->session->get('username');
 if ($username === null) {
     // 如果用户未登录，显示注册和登录链接
-    $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
     $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
 } else {
     // 如果用户已登录，显示欢迎信息和退出登录链接

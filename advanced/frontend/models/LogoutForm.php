@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: 我说的队
+ * Coding by 何禹姗 2211421, 20241210
+ * 登出 表单model
+ */
 
 namespace frontend\models;
 
