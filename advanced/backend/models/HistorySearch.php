@@ -9,6 +9,11 @@ use backend\models\History;
 /**
  * HistorySearch represents the model behind the search form of `backend\models\History`.
  */
+/**
+ * team: 我说的队
+ * Coding by 胡文馨 2211989, 20241209
+ * 发展历史搜索 model 表单
+ */
 class HistorySearch extends History
 {
     /**
