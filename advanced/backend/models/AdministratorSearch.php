@@ -2,22 +2,22 @@
 /**
  * team: 我说的队
  * Coding by 何禹姗 2211421, 20241210
- * 涵盖领域 model 搜索
+ * 管理员表 model 搜索
  */
 namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Domain;
+use backend\models\Administrator;
 
-class DomainSearch extends Domain
+class AdministratorSearch extends Administrator
 {
     public function rules()
     {
         return [
-            [['DomainID', 'DomainName', 'Description', 'Tech', 'Application', 'References'], 'safe'],
-            [['DomainName'], 'string', 'max' => 255],
-            [['DomainID'], 'integer'],
+            [['Aid', 'Aname', 'Apassword', 'Amail'], 'safe'],
+            [['Aname'], 'string', 'max' => 255],
+            [['Aid'], 'integer'],
         ];
     }
 
@@ -28,7 +28,7 @@ class DomainSearch extends Domain
 
     public function search($params)
     {
-        $query = Domain::find();
+        $query = Administrator::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -41,10 +41,10 @@ class DomainSearch extends Domain
         }
 
         $query->andFilterWhere([
-            'DomainID' => $this->DomainID,
+            'Aid' => $this->Aid,
         ]);
 
-        $query->andFilterWhere(['like', 'DomainName', $this->DomainName]);
+        $query->andFilterWhere(['like', 'Aname', $this->Aname]);
 
         return $dataProvider;
     }
