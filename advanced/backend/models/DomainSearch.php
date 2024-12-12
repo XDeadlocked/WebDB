@@ -8,7 +8,7 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Project;
+use backend\models\Domain;
 
 class DomainSearch extends Domain
 {

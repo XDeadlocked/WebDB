@@ -76,7 +76,7 @@ class ResearchController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->ResearchID]);
+                return $this->redirect(['view', 'ResearchID' => $model->ResearchID]);
             }
         } else {
             $model->loadDefaultValues();
@@ -130,7 +130,7 @@ class ResearchController extends Controller
      */
     protected function findModel($ResearchID)
     {
-        if (($model = Research::findOne(['id' => $ResearchID])) !== null) {
+        if (($model = Research::findOne(['ResearchID' => $ResearchID])) !== null) {
             return $model;
         }
 

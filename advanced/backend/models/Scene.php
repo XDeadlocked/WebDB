@@ -8,7 +8,7 @@ use Yii;
     public $SceneName;
     public $TargetAudience;
     public $Overview;
-    public $ReleatedTech;
+    public $RelatedTech;
     public $Challenges;
     public $FuturePotential;
 */
@@ -19,7 +19,7 @@ use Yii;
     * @property string|null $SceneName
     * @property string|null $TargetAudience
     * @property string|null $Overview
-    * @property string|null $ReleatedTech
+    * @property string|null $RelatedTech
     * @property string|null $Challenges
     * @property string|null $FuturePotential
  */
@@ -46,7 +46,7 @@ class Scene extends \yii\db\ActiveRecord
         return [
             [['SceneID'], 'required'],
             [['SceneID'], 'integer'],
-            [['SceneName', 'TargetAudience', 'Overview', 'ReleatedTech', 'Challenges', 'FuturePotential'], 'string'],
+            [['SceneName', 'TargetAudience', 'Overview', 'RelatedTech', 'Challenges', 'FuturePotential'], 'string'],
             [['SceneID'], 'unique'],
         ];
     }
@@ -61,7 +61,7 @@ class Scene extends \yii\db\ActiveRecord
             'SceneName' => 'Scene Name',
             'TargetAudience' => 'Target Audience',
             'Overview' => 'Overview',
-            'ReleatedTech' => 'Releated Tech',
+            'RelatedTech' => 'Related Tech',
             'Challenges' => 'Challenges',
             'FuturePotential' => 'Future Potential',
         ];

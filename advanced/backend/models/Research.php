@@ -49,7 +49,7 @@ class Research extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ResearchID' => 'Researchid',
+            'ResearchID' => 'ResearchID',
             'PaperTitle' => 'Paper Title',
             'Authors' => 'Authors',
             'Conference' => 'Conference',

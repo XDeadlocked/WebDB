@@ -142,3 +142,291 @@ $_SERVER = [
     ]
     'argc' => 2
 ]
+2024-12-12 13:08:04 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'homework'@'localhost' (using password: YES) in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'homework', Object(SensitiveParameterValue), NULL)
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\advanced\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'homework'@'localhost' (using password: YES) in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\advanced\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'homework'@'localhost' (using password: YES)
+)
+
+2024-12-12 13:08:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ADVISOR_2023_DIR' => 'C:\\Program Files (x86)\\Intel\\oneAPI\\advisor\\2023.1.0'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\LEGION\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HUAWEI-MATEBOOK'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'CONDA_DEFAULT_ENV' => 'base'
+    'CONDA_EXE' => 'X:\\IDE\\Anaconda\\Scripts\\conda.exe'
+    'CONDA_PREFIX' => 'X:\\IDE\\Anaconda'
+    'CONDA_PROMPT_MODIFIER' => '(base) '
+    'CONDA_PYTHON_EXE' => 'X:\\IDE\\Anaconda\\python.exe'
+    'CONDA_SHLVL' => '1'
+    'CUDA_PATH' => 'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2'
+    'CUDA_PATH_V12_2' => 'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GUROBI_HOME' => 'C:\\gurobi1100\\win64'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\LEGION'
+    'LOCALAPPDATA' => 'C:\\Users\\LEGION\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HUAWEI-MATEBOOK'
+    'NODE_PATH' => 'C:\\Program Files\\nodejs'
+    'NUMBER_OF_PROCESSORS' => '16'
+    'ONEAPI_ROOT' => 'C:\\Program Files (x86)\\Intel\\oneAPI\\'
+    'OneDrive' => 'C:\\Users\\LEGION\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\LEGION\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'X:\\IDE\\Anaconda;X:\\IDE\\Anaconda\\Library\\mingw-w64\\bin;X:\\IDE\\Anaconda\\Library\\usr\\bin;X:\\IDE\\Anaconda\\Library\\bin;X:\\IDE\\Anaconda\\Scripts;X:\\IDE\\Anaconda\\bin;X:\\IDE\\Anaconda\\condabin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\gurobi1100\\win64\\bin;C:\\Program Files (x86)\\Intel\\oneAPI\\tbb\\latest\\redist\\intel64\\vc_mt;C:\\Program Files (x86)\\Intel\\oneAPI\\tbb\\latest\\redist\\ia32\\vc_mt;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\redist\\ia32_win\\compiler;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2\\libnvvp;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;X:\\Windows Kits\\10\\Windows Performance Toolkit;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.2.1;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MATLAB\\R2023b\\bin;X:\\IDE\\MATLAB\\runtime\\win64;X:\\IDE\\MATLAB\\bin;C:\\Program Files\\nodejs;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe;X:\\IDE\\Anaconda\\python.exe;X:\\opencv\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files (x86)\\NetSarang\\Xshell 7;C:\\Program Files\\R\\R-4.3.3\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\PuTTY;C:\\Users\\LEGION\\AppData\\Roaming\\Python\\Python311\\Scripts;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin;C:\\Users\\LEGION\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;C:\\Users\\LEGION\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\LEGION\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\LEGION\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\LEGION\\AppData\\Local\\GitHubDesktop\\bin;X:\\IDE\\Anaconda;X:\\IDE\\Anaconda\\Scripts;X:\\IDE\\Anaconda\\Library\\bin;X:\\IDE\\Anaconda\\Library\\mingw-w64\\bin;C:\\Program Files\\nodejs\\node_modules;C:\\Users\\LEGION\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Graphviz2.38\\bin;X:\\IDE\\mingw-w64-v11.0.0\\bin;C:\\Program Files\\R\\R-4.3.3\\bin;D:\\ffmpeg\\bin;C:\\Users\\LEGION\\AppData\\Roaming\\Python\\Python311\\Scripts;C:\\Users\\LEGION\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 141 Stepping 1, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8d01'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSExecutionPolicyPreference' => 'Bypass'
+    'PSModulePath' => 'C:\\Users\\LEGION\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\LEGION\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\LEGION\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'HUAWEI-MATEBOOK'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HUAWEI-MATEBOOK'
+    'USERNAME' => 'LEGION'
+    'USERPROFILE' => 'C:\\Users\\LEGION'
+    'VS140COMNTOOLS' => 'X:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools\\'
+    'VS2022INSTALLDIR' => 'X:\\IDE\\VS\\community'
+    'VTUNE_PROFILER_2023_DIR' => 'C:\\Program Files (x86)\\Intel\\oneAPI\\vtune\\2023.1.0'
+    'windir' => 'C:\\WINDOWS'
+    'WSLENV' => 'WT_SESSION:WT_PROFILE_ID:'
+    'WT_PROFILE_ID' => '{5f5cd290-0eea-4a35-9251-06bfda6db06f}'
+    'WT_SESSION' => '8161af5f-2452-491a-970d-8654c74c2072'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\advanced\\'
+    'ZES_ENABLE_SYSMAN' => '1'
+    '_CONDA_EXE' => 'X:/IDE/Anaconda\\Scripts\\conda.exe'
+    '_CONDA_ROOT' => 'X:/IDE/Anaconda'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1734005284.8033
+    'REQUEST_TIME' => 1734005284
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-12-12 13:15:20 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'homework'@'localhost' (using password: NO) in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'homework', Object(SensitiveParameterValue), NULL)
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\advanced\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'homework'@'localhost' (using password: NO) in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(320): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Controller.php(182): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\advanced\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'homework'@'localhost' (using password: NO)
+)
+
+2024-12-12 13:15:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ADVISOR_2023_DIR' => 'C:\\Program Files (x86)\\Intel\\oneAPI\\advisor\\2023.1.0'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\LEGION\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HUAWEI-MATEBOOK'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'CONDA_DEFAULT_ENV' => 'base'
+    'CONDA_EXE' => 'X:\\IDE\\Anaconda\\Scripts\\conda.exe'
+    'CONDA_PREFIX' => 'X:\\IDE\\Anaconda'
+    'CONDA_PROMPT_MODIFIER' => '(base) '
+    'CONDA_PYTHON_EXE' => 'X:\\IDE\\Anaconda\\python.exe'
+    'CONDA_SHLVL' => '1'
+    'CUDA_PATH' => 'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2'
+    'CUDA_PATH_V12_2' => 'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GUROBI_HOME' => 'C:\\gurobi1100\\win64'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\LEGION'
+    'LOCALAPPDATA' => 'C:\\Users\\LEGION\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HUAWEI-MATEBOOK'
+    'NODE_PATH' => 'C:\\Program Files\\nodejs'
+    'NUMBER_OF_PROCESSORS' => '16'
+    'ONEAPI_ROOT' => 'C:\\Program Files (x86)\\Intel\\oneAPI\\'
+    'OneDrive' => 'C:\\Users\\LEGION\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\LEGION\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'X:\\IDE\\Anaconda;X:\\IDE\\Anaconda\\Library\\mingw-w64\\bin;X:\\IDE\\Anaconda\\Library\\usr\\bin;X:\\IDE\\Anaconda\\Library\\bin;X:\\IDE\\Anaconda\\Scripts;X:\\IDE\\Anaconda\\bin;X:\\IDE\\Anaconda\\condabin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\gurobi1100\\win64\\bin;C:\\Program Files (x86)\\Intel\\oneAPI\\tbb\\latest\\redist\\intel64\\vc_mt;C:\\Program Files (x86)\\Intel\\oneAPI\\tbb\\latest\\redist\\ia32\\vc_mt;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\redist\\ia32_win\\compiler;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.2\\libnvvp;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;X:\\Windows Kits\\10\\Windows Performance Toolkit;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.2.1;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MATLAB\\R2023b\\bin;X:\\IDE\\MATLAB\\runtime\\win64;X:\\IDE\\MATLAB\\bin;C:\\Program Files\\nodejs;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe;X:\\IDE\\Anaconda\\python.exe;X:\\opencv\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files (x86)\\NetSarang\\Xshell 7;C:\\Program Files\\R\\R-4.3.3\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\PuTTY;C:\\Users\\LEGION\\AppData\\Roaming\\Python\\Python311\\Scripts;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin;C:\\Users\\LEGION\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;C:\\Users\\LEGION\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\LEGION\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\LEGION\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\LEGION\\AppData\\Local\\GitHubDesktop\\bin;X:\\IDE\\Anaconda;X:\\IDE\\Anaconda\\Scripts;X:\\IDE\\Anaconda\\Library\\bin;X:\\IDE\\Anaconda\\Library\\mingw-w64\\bin;C:\\Program Files\\nodejs\\node_modules;C:\\Users\\LEGION\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Graphviz2.38\\bin;X:\\IDE\\mingw-w64-v11.0.0\\bin;C:\\Program Files\\R\\R-4.3.3\\bin;D:\\ffmpeg\\bin;C:\\Users\\LEGION\\AppData\\Roaming\\Python\\Python311\\Scripts;C:\\Users\\LEGION\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 141 Stepping 1, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8d01'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSExecutionPolicyPreference' => 'Bypass'
+    'PSModulePath' => 'C:\\Users\\LEGION\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\LEGION\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\LEGION\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'HUAWEI-MATEBOOK'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HUAWEI-MATEBOOK'
+    'USERNAME' => 'LEGION'
+    'USERPROFILE' => 'C:\\Users\\LEGION'
+    'VS140COMNTOOLS' => 'X:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools\\'
+    'VS2022INSTALLDIR' => 'X:\\IDE\\VS\\community'
+    'VTUNE_PROFILER_2023_DIR' => 'C:\\Program Files (x86)\\Intel\\oneAPI\\vtune\\2023.1.0'
+    'windir' => 'C:\\WINDOWS'
+    'WSLENV' => 'WT_SESSION:WT_PROFILE_ID:'
+    'WT_PROFILE_ID' => '{5f5cd290-0eea-4a35-9251-06bfda6db06f}'
+    'WT_SESSION' => '8161af5f-2452-491a-970d-8654c74c2072'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\advanced\\'
+    'ZES_ENABLE_SYSMAN' => '1'
+    '_CONDA_EXE' => 'X:/IDE/Anaconda\\Scripts\\conda.exe'
+    '_CONDA_ROOT' => 'X:/IDE/Anaconda'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1734005720.672
+    'REQUEST_TIME' => 1734005720
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
