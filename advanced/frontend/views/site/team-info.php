@@ -7,6 +7,44 @@
  */
 $this->title = '团队信息';
 ?>
+
+<style>
+    /* 设置背景图片样式 */
+    body {
+        background-image: url('<?= \yii\helpers\Url::to('../web/image/team.jpg') ?>'); /* 使用 Yii 的 Url::to() 方法生成路径 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* 固定背景图 */
+    }
+
+    .site-team-info {
+        /* 添加半透明背景样式 */
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .site-team-info h1, .site-team-info h2, .site-team-info p, .site-team-info li {
+        color: #000; /* 设置文字为黑色 */
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.8); /* 调整卡片的透明度 */
+        border: none;
+    }
+
+    .card-header {
+        border-radius: 5px 5px 0 0; /* 设置卡片头部圆角 */
+    }
+
+    .list-group-item {
+        background: rgba(255, 255, 255, 0.9); /* 列表项背景 */
+        color: #000; /* 列表项文字颜色 */
+    }
+</style>
+
 <div class="site-team-info container mt-5">
     <div class="text-center mb-5">
         <h1 class="display-4"><?= $this->title ?></h1>
