@@ -9,6 +9,11 @@ use backend\models\People;
 /**
  * PeopleSearch represents the model behind the search form of `backend\models\People`.
  */
+/**
+ * team: 我说的队
+ * Coding by 胡文馨 2211989, 20241209
+ * 人物搜索管理 model 表单
+ */
 class PeopleSearch extends People
 {
     /**

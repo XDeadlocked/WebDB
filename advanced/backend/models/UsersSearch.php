@@ -1,20 +1,19 @@
 <?php
-
+/**
+ * Team: 我说的队
+ * Coding by 胡文馨 2211989, 20241211
+ * 用户搜索 model
+ */
 namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\History;
+use backend\models\Users;
 
 /**
- * HistorySearch represents the model behind the search form of `backend\models\History`.
+ * UsersSearch represents the model behind the search form of `backend\models\Users`.
  */
-/**
- * team: 我说的队
- * Coding by 胡文馨 2211989, 20241209
- * 发展历史搜索 model 表单
- */
-class HistorySearch extends History
+class UsersSearch extends Users
 {
     /**
      * {@inheritdoc}
@@ -22,8 +21,8 @@ class HistorySearch extends History
     public function rules()
     {
         return [
-            [['id', 'year'], 'integer'],
-            [['event_title', 'event_description', 'technology_impact', 'references'], 'safe'],
+            [['Uid'], 'integer'],
+            [['Uname', 'Upassword', 'Umail'], 'safe'],
         ];
     }
 
@@ -45,7 +44,7 @@ class HistorySearch extends History
      */
     public function search($params)
     {
-        $query = History::find();
+        $query = Users::find();
 
         // add conditions that should always apply here
 
@@ -63,14 +62,12 @@ class HistorySearch extends History
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'year' => $this->year,
+            'Uid' => $this->Uid,
         ]);
 
-        $query->andFilterWhere(['like', 'event_title', $this->event_title])
-            ->andFilterWhere(['like', 'event_description', $this->event_description])
-            ->andFilterWhere(['like', 'technology_impact', $this->technology_impact])
-            ->andFilterWhere(['like', 'references', $this->references]);
+        $query->andFilterWhere(['like', 'Uname', $this->Uname])
+            ->andFilterWhere(['like', 'Upassword', $this->Upassword])
+            ->andFilterWhere(['like', 'Umail', $this->Umail]);
 
         return $dataProvider;
     }
