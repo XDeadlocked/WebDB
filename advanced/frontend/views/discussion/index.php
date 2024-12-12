@@ -5,7 +5,6 @@
  * 留言板 视图
  */
 
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -23,6 +22,11 @@ $this->title = '留言板';
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
+        background-image: url('../web/image/discussion_index.jpg'); /* 添加本地背景图 */
+        background-size: cover; /* 背景图覆盖整个页面 */
+        background-position: center; /* 背景图居中 */
+        background-repeat: no-repeat; /* 防止背景图重复 */
+        background-attachment: fixed; /* 固定背景图 */
     }
     .container {
         margin-top: 20px;
@@ -31,24 +35,26 @@ $this->title = '留言板';
         margin-bottom: 20px;
         border-radius: 5px;
         overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.5); /* 更高的半透明白色背景 */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 暗淡阴影 */
     }
     .card-header {
-        background-color: #808080; /* 灰色背景 */
+        background-color: rgba(128, 128, 128, 0.7); /* 更高的半透明灰色背景 */
         color: white;
         padding: 10px;
         text-align: center;
     }
     .card-body {
         padding: 20px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5); /* 更浅的半透明白色背景 */
     }
     .post {
         margin-bottom: 20px;
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0,0,0,.1);
+        background-color: rgba(255, 255, 255, 0.7); /* 更高的半透明白色背景 */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     .post p {
         margin: 0 0 5px;
@@ -65,8 +71,8 @@ $this->title = '留言板';
         border-radius: 5px;
     }
     .btn-primary {
-        background-color: #808080; /* 灰色按钮 */
-        border-color: #808080;
+        background-color: rgba(128, 128, 128, 0.7); /* 半透明灰色按钮 */
+        border-color: rgba(128, 128, 128, 0.9);
         color: white;
         border-radius: 5px;
     }
