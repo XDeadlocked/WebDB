@@ -16,7 +16,7 @@ class SceneForm extends Model
     public $SceneName;
     public $TargetAudience;
     public $Overview;
-    public $ReleatedTech;
+    public $RelatedTech;
     public $Challenges;
     public $FuturePotential;
 
@@ -25,7 +25,7 @@ class SceneForm extends Model
         return [
             [['SceneID'], 'required'],
             [['SceneID'], 'integer'],
-            [['SceneName', 'TargetAudience', 'Overview', 'ReleatedTech', 'Challenges', 'FuturePotential'], 'string'],
+            [['SceneName', 'TargetAudience', 'Overview', 'RelatedTech', 'Challenges', 'FuturePotential'], 'string'],
             [['SceneID'], 'unique'],
         ];
     }
@@ -37,7 +37,7 @@ class SceneForm extends Model
             'SceneName' => 'Scene Name',
             'TargetAudience' => 'Target Audience',
             'Overview' => 'Overview',
-            'ReleatedTech' => 'Releated Tech',
+            'RelatedTech' => 'Related Tech',
             'Challenges' => 'Challenges',
             'FuturePotential' => 'Future Potential',
         ];
@@ -52,7 +52,7 @@ class SceneForm extends Model
             $scene->SceneName = $this->SceneName;
             $scene->TargetAudience = $this->TargetAudience;
             $scene->Overview = $this->Overview;
-            $scene->ReleatedTech = $this->ReleatedTech;
+            $scene->RelatedTech = $this->RelatedTech;
             $scene->Challenges = $this->Challenges;
             $scene->FuturePotential = $this->FuturePotential;
             return $scene->save();

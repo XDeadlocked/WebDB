@@ -10,7 +10,7 @@
     * @property string|null $SceneName
     * @property string|null $TargetAudience
     * @property string|null $Overview
-    * @property string|null $ReleatedTech
+    * @property string|null $RelatedTech
     * @property string|null $Challenges
     * @property string|null $FuturePotential
  */
@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'SceneName',
             'TargetAudience',
             'Overview',
-            'ReleatedTech',
+            'RelatedTech',
             'Challenges',
             'FuturePotential',
             [

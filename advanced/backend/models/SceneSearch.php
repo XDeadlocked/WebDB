@@ -8,16 +8,16 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Project;
+use backend\models\Scene;
 
-class SceneSearch extends Project
+class SceneSearch extends Scene
 {
     public function rules()
     {
         return [
             [['SceneID'], 'required'],
             [['SceneID'], 'integer'],
-            [['SceneName', 'TargetAudience', 'Overview', 'ReleatedTech', 'Challenges', 'FuturePotential'], 'string'],
+            [['SceneName', 'TargetAudience', 'Overview', 'RelatedTech', 'Challenges', 'FuturePotential'], 'string'],
             [['SceneID'], 'unique'],
         ];
     }
@@ -29,7 +29,7 @@ class SceneSearch extends Project
 
     public function search($params)
     {
-        $query = Project::find();
+        $query = Scene::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

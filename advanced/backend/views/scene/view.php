@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'SceneName',
             'TargetAudience',
             'Overview',
-            'ReleatedTech',
+            'RelatedTech',
             'Challenges',
             'FuturePotential',
         ],

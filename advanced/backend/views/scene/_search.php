@@ -21,7 +21,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'SceneName') ?>
     <?= $form->field($model, 'TargetAudience') ?>
     <?= $form->field($model, 'Overview') ?>
-    <?= $form->field($model, 'ReleatedTech') ?>
+    <?= $form->field($model, 'RelatedTech') ?>
     <?= $form->field($model, 'Challenges') ?>
     <?= $form->field($model, 'FuturePotential') ?>
 

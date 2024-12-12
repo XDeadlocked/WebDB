@@ -8,9 +8,9 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Project;
+use backend\models\Research;
 
-class ResearchSearch extends Project
+class ResearchSearch extends Research
 {
     public function rules()
     {
@@ -29,7 +29,7 @@ class ResearchSearch extends Project
 
     public function search($params)
     {
-        $query = Project::find();
+        $query = Research::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
