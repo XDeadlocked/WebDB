@@ -9,7 +9,7 @@
 use yii\helpers\Html;
 
 $this->title = '更新应用场景: ' . $model->SceneID;
-$this->params['breadcrumbs'][] = ['label' => 'Projects', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Scenes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->SceneID, 'url' => ['view', 'SceneID' => $model->SceneID]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

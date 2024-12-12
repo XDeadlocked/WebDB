@@ -9,7 +9,7 @@
     * @property string|null $SceneName
     * @property string|null $TargetAudience
     * @property string|null $Overview
-    * @property string|null $ReleatedTech
+    * @property string|null $RelatedTech
     * @property string|null $Challenges
     * @property string|null $FuturePotential
  */
@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'SceneName')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'TargetAudience')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'Overview')->textarea(['rows' => 6]) ?>
-    <?= $form->field($model, 'ReleatedTech')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'RelatedTech')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'Challenges')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'FuturePotential')->textarea(['rows' => 6]) ?>
     <div class="form-group">

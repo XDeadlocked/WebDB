@@ -5,7 +5,7 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=homework',
-            'username' => 'homework',
+            'username' => 'root',
             'password' => '123456',
             'charset' => 'utf8',
         ],

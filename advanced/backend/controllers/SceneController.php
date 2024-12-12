@@ -76,7 +76,7 @@ class SceneController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->SceneID]);
+                return $this->redirect(['view', 'SceneID' => $model->SceneID]);
             }
         } else {
             $model->loadDefaultValues();
@@ -130,7 +130,7 @@ class SceneController extends Controller
      */
     protected function findModel($SceneID)
     {
-        if (($model = Scene::findOne(['id' => $SceneID])) !== null) {
+        if (($model = Scene::findOne(['SceneID' => $SceneID])) !== null) {
             return $model;
         }
 
