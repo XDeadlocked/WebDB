@@ -9,6 +9,48 @@
 $this->title = '人物介绍';
 ?>
 
+<style>
+    /* 背景图片样式 */
+    body {
+        background-image: url('<?= \yii\helpers\Url::to('../web/image/people.jpg') ?>'); /* 使用 Yii 的 Url::to() 方法 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* 固定背景图 */
+    }
+
+    .people-index {
+        /* 添加半透明背景样式 */
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 调整表格文字颜色和样式 */
+    .people-index h1, .people-index th, .people-index td {
+        color: #000; /* 黑色文字 */
+    }
+
+    /* 表格头部样式 */
+    .people-index .table-dark {
+        background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+        color: #000; /* 黑色文字 */
+        border-bottom: 2px solid #ddd; /* 添加底部边框 */
+    }
+
+    /* 表格单元格边框 */
+    .people-index .table-bordered td {
+        border-color: #000; /* 设置表格边框颜色为黑色 */
+    }
+
+    /* 表格头部背景颜色与表格背景颜色一致 */
+    .people-index .table-dark th {
+        background-color: rgba(255, 255, 255, 0.9); /* 表格头背景为半透明白色 */
+        color: #000; /* 黑色文字 */
+    }
+</style>
+
 <div class="container mt-5">
     <h1 class="text-center mb-4"><?= $this->title ?></h1>
 
@@ -18,7 +60,7 @@ $this->title = '人物介绍';
     </div>
 
     <!-- 人物列表表格 -->
-    <div class="table-responsive">
+    <div class="table-responsive people-index">
         <table class="table table-hover table-bordered align-middle">
             <thead class="table-dark">
                 <tr>
