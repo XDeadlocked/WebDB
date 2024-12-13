@@ -1,4 +1,4 @@
-2024-12-10 17:31:39 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php:721
+2024-12-10 17:31:39 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'homework' in X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php:721
 Stack trace:
 #0 X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), NULL)
 #1 X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php(636): yii\db\Connection->createPdoInstance()
@@ -25,7 +25,7 @@ Stack trace:
 #22 X:\Coding\Github\WebDB\advanced\yii(23): yii\base\Application->run()
 #23 {main}
 
-Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php:647
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'homework' in X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php:647
 Stack trace:
 #0 X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php(1066): yii\db\Connection->open()
 #1 X:\Coding\Github\WebDB\advanced\vendor\yiisoft\yii2\db\Connection.php(1053): yii\db\Connection->getMasterPdo()
@@ -54,7 +54,7 @@ Array
 (
     [0] => HY000
     [1] => 1049
-    [2] => Unknown database 'yii2advanced'
+    [2] => Unknown database 'homework'
 )
 
 2024-12-10 17:31:39 [-][-][-][info][application] $_GET = []
