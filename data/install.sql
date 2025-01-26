@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : phpstudy
+ Source Server         : hys
  Source Server Type    : MySQL
- Source Server Version : 50726
+ Source Server Version : 50726 (5.7.26)
  Source Host           : localhost:3306
- Source Schema         : homework
+ Source Schema         : webdb
 
  Target Server Type    : MySQL
- Target Server Version : 50726
+ Target Server Version : 50726 (5.7.26)
  File Encoding         : 65001
 
- Date: 13/12/2024 18:22:48
+ Date: 14/12/2024 20:36:20
 */
 
 SET NAMES utf8mb4;
@@ -27,7 +27,7 @@ CREATE TABLE `administrator`  (
   `Apassword` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Amail` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Aid`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of administrator
@@ -43,7 +43,7 @@ CREATE TABLE `discussion`  (
   `Dtext` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `Ddate` date NULL DEFAULT NULL,
   PRIMARY KEY (`Did`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of discussion
@@ -65,7 +65,7 @@ CREATE TABLE `domains`  (
   `Application` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `References` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`DomainID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of domains
@@ -93,7 +93,7 @@ CREATE TABLE `history`  (
   `technology_impact` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `references` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of history
@@ -126,7 +126,7 @@ CREATE TABLE `members`  (
   `Mlink` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Mprofession` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Mid`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of members
@@ -134,7 +134,7 @@ CREATE TABLE `members`  (
 INSERT INTO `members` VALUES (0, '石家伊', '2211532', 0, 'https://github.com/ya-yaa/NetDatabase.git', '信息安全');
 INSERT INTO `members` VALUES (1, '何禹姗', '2211421', 0, 'https://github.com/JQ777777/Internet-Database-personalHW', '计算机科学与技术');
 INSERT INTO `members` VALUES (2, '胡文馨', '2211989', 0, 'https://github.com/wenxinhuhu/Internet-database-development.git', '信息安全');
-INSERT INTO `members` VALUES (4, '许宸', '2110598', 0, NULL, '计算机科学与技术');
+INSERT INTO `members` VALUES (4, '许宸', '2110598', 0, 'https://github.com/XDeadlocked/webdb_hw', '计算机科学与技术');
 
 -- ----------------------------
 -- Table structure for people
@@ -149,7 +149,7 @@ CREATE TABLE `people`  (
   `contributions` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `references` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of people
@@ -182,7 +182,7 @@ CREATE TABLE `project`  (
   `Tech` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `Effect` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of project
@@ -214,7 +214,7 @@ CREATE TABLE `research`  (
   `Link` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`ResearchID`) USING BTREE,
   INDEX `SceID`(`SceneID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of research
@@ -247,7 +247,7 @@ CREATE TABLE `scene`  (
   `Challenges` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `FuturePotential` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`SceneID`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of scene
@@ -271,6 +271,10 @@ CREATE TABLE `users`  (
   `Umail` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Uid`) USING BTREE,
   INDEX `Uname`(`Uname`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
 
 SET FOREIGN_KEY_CHECKS = 1;

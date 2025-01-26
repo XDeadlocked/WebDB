@@ -96,6 +96,8 @@ $this->title = '团队信息';
                 <li class="list-group-item"><strong>何禹姗</strong> - 完成本项目的框架搭建、数据收集、主页和注册登录页面、工程应用及涵盖领域MVC的前后端</li>
                 <li class="list-group-item"><strong>许宸</strong> - 完成本项目的数据收集、前沿及应用场景MVC的前后端</li>
             </ul>
+            <!-- 添加团队作业链接 -->
+            <p>我们的团队作业链接： <a href="https://github.com/XDeadlocked/WebDB" target="_blank">https://github.com/XDeadlocked/WebDB</a></p>
         </div>
     </div>
 </div>
